@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shorten Urls</title>
+</head>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<body>
+
+  <h1>Welcome to short.com</h1>
+ 
+    <%= form_with model: ShortenUrl.new do |form| %>
+      <p>
+        <%= form.label 'Please enter your URL here' %><br>
+        <%= form.text_field :url, required: true %>
+      </p>
+     
+      <p>
+        <%= form.submit 'SHORTEN' %>
+      </p>
+    <% end %>
+
+    <div id="display_result"></div>
+    
+</body>
+</html>

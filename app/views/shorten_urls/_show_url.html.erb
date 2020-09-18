@@ -1,0 +1,10 @@
+<div class="container">
+  <p>
+    <span><strong>Original Url</strong></span>
+    <%= @shorten_url.url %>
+  </p>
+  <p>
+    <span><strong>Shortened Url</strong></span>
+    <%= link_to "#{request.host_with_port}/" + "#{@shorten_url.short_url}", shortened_path(@shorten_url.id), data: { turbolinks: false } %>
+  </p>
+</div>
