@@ -1,0 +1,10 @@
+<h1>Analytics</h1>
+<% @stats.each do |stat| %>
+  <p><strong><%= stat.url %></strong></p>
+  <p><%= link_title(stat.short_url) %></p>
+
+  <p>Total clicks: <%= stat.clicked %></p>
+  <p>Countries: <%= show_countries(stat) %></p>
+<% end %>
+
+<%= will_paginate @stats %>

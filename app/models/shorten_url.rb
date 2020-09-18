@@ -2,6 +2,7 @@ class ShortenUrl < ApplicationRecord
   serialize :country
   serialize :ip_address
   LENGTH = 5
+  self.per_page = 10
   validates_presence_of :url
   validates_format_of :url, :with => /\A(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?\Z/i
 
